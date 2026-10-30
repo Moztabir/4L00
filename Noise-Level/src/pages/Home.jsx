@@ -1,9 +1,6 @@
-
 import Container from 'react-bootstrap/Container'
-
 import Header from '../Components/layout/Header.jsx'
 import Footer from '../Components/layout/Footer.jsx'
-
 import HeroSection from '../Components/home/HeroSection.jsx'
 import StorySection from '../Components/home/StorySection.jsx'
 
@@ -11,10 +8,12 @@ export default function Home() {
   return (
     <>
       <Header />
-
-      <main>
+      <main
+      style={{
+        backgroundColor:'#5DBFE9',
+        minHeight:'100vh'
+      }}>
         <HeroSection />
-
         <StorySection />
 
         <section id="about" className="py-5">

@@ -1,13 +1,28 @@
+
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 
 export default function Header() {
   return (
-    <Navbar bg="primary" data-bs-theme="dark" expand="lg">
+    
+
+<Navbar
+  bg="primary"
+  data-bs-theme="dark"
+  expand="lg"
+  style={{
+    fontFamily: "'Peralta', serif",
+    fontWeight: 400
+  }}
+>
       <Container>
-        <Navbar.Brand href="#home">
-          Noise Level
+        <Navbar.Brand
+          href="#home"
+          className="d-flex align-items-center"
+        >
+
+          <span>Noise Level</span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="main-nav" />
@@ -24,4 +39,3 @@ export default function Header() {
     </Navbar>
   )
 }
-

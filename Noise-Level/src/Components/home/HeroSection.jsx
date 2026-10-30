@@ -1,8 +1,9 @@
-
 import { useEffect, useRef } from 'react'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import backgroundMusic from '../../assets/sound/water.mp3'
+import logo from '../../assets/Logo/FGlogo.PNG'
+
 
 
 export default function HeroSection() {
@@ -47,14 +48,25 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section id="home" className="bg-light py-5">
+    <section id="home" className="py-5">
       <Container className="text-center py-5">
-
-        <h1 className="display-4">
-          Welcome to Noise Level
+        <img src={logo} alt="Logo" width="250" />
+        <h1 className="display-4"bg="primary"
+  data-bs-theme="dark"
+  expand="lg"
+  style={{
+    fontFamily: "'Peralta', serif",
+    fontWeight: 400
+  }}>
+          Welcome to Fish & Guppy
         </h1>
-
-        <p className="lead mt-3">
+        <p className="lead mt-3"bg="primary"
+  data-bs-theme="dark"
+  expand="lg"
+  style={{
+    fontFamily: "'Peralta', serif",
+    fontWeight: 400
+  }}>
           Dive into a new underwater adventure.
         </p>
 
@@ -73,8 +85,6 @@ export default function HeroSection() {
     console.error('Background audio failed to load')
   }
 />
-
-
       </Container>
     </section>
   )
