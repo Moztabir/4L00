@@ -68,13 +68,7 @@ export default function HeroSection() {
     fontWeight: 400
   }}>
           Dive into a new underwater adventure.
-        </p>
-
-        <Button variant="primary" href="#story">
-          Explore Our Game
-        </Button>
-
-        
+        </p>      
 <audio
   ref={audioRef}
   src={backgroundMusic}
