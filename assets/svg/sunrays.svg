@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <defs>
+    <linearGradient id="bright" gradientUnits="userSpaceOnUse" x1="0" y1="89" x2="0" y2="757">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="faint" gradientUnits="userSpaceOnUse" x1="0" y1="89" x2="0" y2="757">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Wide, bright rays -->
+  <g fill="url(#bright)">
+    <polygon points="720,-54 2992,306 2970,424"/>
+    <polygon points="720,-54 2787,954 2732,1061"/>
+    <polygon points="720,-54 2402,1515 2318,1600"/>
+    <polygon points="720,-54 1870,1938 1764,1995"/>
+    <polygon points="720,-54 1237,2187 1119,2211"/>
+    <polygon points="720,-54 560,2240 440,2229"/>
+    <polygon points="720,-54 -104,2093 -215,2047"/>
+    <polygon points="720,-54 -696,1758 -789,1682"/>
+    <polygon points="720,-54 -1164,1265 -1231,1165"/>
+    <polygon points="720,-54 -1467,657 -1502,541"/>
+    <polygon points="720,-54 -1580,-14 -1579,-134"/>
+  </g>
+
+  <!-- Thin, faint rays -->
+  <g fill="url(#faint)">
+    <polygon points="720,-54 2920,618 2895,695"/>
+    <polygon points="720,-54 2627,1232 2581,1298"/>
+    <polygon points="720,-54 2167,1733 2104,1783"/>
+    <polygon points="720,-54 1582,2079 1507,2107"/>
+    <polygon points="720,-54 920,2237 840,2243"/>
+    <polygon points="720,-54 242,2196 164,2178"/>
+    <polygon points="720,-54 -395,1958 -465,1917"/>
+    <polygon points="720,-54 -934,1544 -989,1485"/>
+    <polygon points="720,-54 -1329,990 -1365,918"/>
+    <polygon points="720,-54 -1545,345 -1558,266"/>
+    <polygon points="720,-54 -1563,-334 -1552,-414"/>
+  </g>
+</svg>

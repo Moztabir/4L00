@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="420" viewBox="0 0 1440 420">
+  <!-- Kelp -->
+  <g fill="none" stroke-linecap="round" stroke-width="13">
+    <path stroke="#0b4a5c" d="M90 400c-30-60 30-100 0-160s30-90 8-150"/>
+    <path stroke="#0e5a62" d="M150 400c26-50-24-90 4-140s-16-70 4-110"/>
+    <path stroke="#0b4a5c" d="M1270 400c-28-60 28-110 0-170s26-90 4-160"/>
+    <path stroke="#0e5a62" d="M1340 400c24-50-22-80 4-130s-14-60 6-100"/>
+    <path stroke="#0a3f52" d="M1200 400c20-40-18-70 2-110"/>
+    <path stroke="#0a3f52" d="M230 400c-18-36 18-60 0-96"/>
+  </g>
+
+  <!-- Back layer of sand -->
+  <path fill="#051b33" d="M0 340c180-50 330-30 500 0s330 40 500 4 300-40 440-14v90H0z"/>
+
+  <!-- Front layer of sand -->
+  <path fill="#02091a" d="M0 382c220-30 420-10 660 2s520 6 780-18v54H0z"/>
+</svg>

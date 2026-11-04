@@ -1,5 +1,5 @@
 
-import { loadComponent } from './components.js'
+import { loadComponent, setupSound } from './components.js'
 
 async function initializeWebsite() {
   try {
@@ -40,6 +40,8 @@ async function initializeWebsite() {
   } catch (error) {
     console.error('Website initialization failed:', error)
   }
+
+  setupSound()
 }
 
 initializeWebsite()

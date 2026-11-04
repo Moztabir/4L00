@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="104" viewBox="-36 -13 60 26">
+  <!-- Tail -->
+  <path d="M-16 0Q-26-8-36-13-29 0-36 13-26 8-16 0Z" fill="#2c3e8f"/>
+  <!-- Body -->
+  <path d="M24 0C12-13-8-11-18 0-8 11 12 13 24 0Z" fill="#d9482b"/>
+  <!-- Belly -->
+  <path d="M21 2C10 3-6 2-15 1-6 9 12 11 21 2Z" fill="#ffc98a"/>
+  <!-- Eye -->
+  <circle cx="14" cy="-3" r="2.4" fill="#06243d"/>
+</svg>
