@@ -118,7 +118,7 @@ const departments = [
         name: 'Shayan',
         role: 'Marketing Team',
         bio: 'I am a marketing team member. I help with social media, promotional materials, and community engagement.',
-        photo: './assets/images/team/10_29_26_Shayan_Portrait.jpg'
+        photo: './assets/images/team/10_29_26_Shayan_portrait.jpg'
       },
       {
         name: 'Megan',
