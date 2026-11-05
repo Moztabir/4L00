@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Noise Level</title>
+
+  <meta
+    name="description"
+    content="Meet Noise Level, the student game development studio behind Fish & Guppy."
+  >
+
+  <link rel="icon" type="image/png" href="./assets/logo/Noise level.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Peralta&display=swap" rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/components/navbar.css">
+  <link rel="stylesheet" href="./css/components/footer.css">
+  <link rel="stylesheet" href="./css/pages/about.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js"
+    }
+  }
+  </script>
+</head>
+
+<body class="about-page">
+
+  <a class="skip-link" href="#about-content">
+    Skip to content
+  </a>
+
+  <div id="site-header"></div>
+  <div id="underwater-bg" aria-hidden="true"></div>
+
+  <main id="about-content">
+    <section class="hero about-intro" id="about">
+      <img
+        src="./assets/svg/sunrays.svg"
+        class="hero_sunrays"
+        alt=""
+        aria-hidden="true"
+      >
+
+      <div class="container about-intro-content">
+
+        <p class="about-eyebrow">
+          NOISE LEVEL STUDIOS
+        </p>
+
+        <h1>About Noise Level</h1>
+
+        <p class="about-description">
+          We're a student game development studio
+          bringing Fish & Guppy to life.
+          Together, we're creating an underwater adventure
+          filled with exploration, puzzles, and storytelling.
+        </p>
+
+        <a href="#crew" class="about-explore-link">
+          Meet the Crew
+          <span aria-hidden="true">↓</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <section class="about-team" id="crew">
+
+      <div class="container">
+
+        <div class="about-section-heading">
+
+          <p class="about-eyebrow">
+            THE PEOPLE BEHIND THE GAME
+          </p>
+
+          <h2>Meet the Crew</h2>
+
+          <p class="about-description">
+            Meet the creative minds working together
+            to bring Fish & Guppy to life.
+          </p>
+
+        </div>
+
+        <section class="team-tier">
+
+          <div class="team-tier-heading">
+
+            <div>
+              <p class="team-tier-label">01 / STUDIO</p>
+
+              <h3>Studio Leadership</h3>
+
+              <p>
+                The people guiding Noise Level Studios.
+              </p>
+            </div>
+
+          </div>
+
+          <div
+            id="leadership-grid"
+            class="leadership-grid"
+          ></div>
+
+        </section>
+
+        <section class="team-tier">
+
+          <div class="team-tier-heading">
+
+            <div>
+              <p class="team-tier-label">02 / LEADERSHIP</p>
+
+              <h3>Department Leads</h3>
+
+              <p>
+                The people leading our different
+                areas of game development.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div
+            id="leads-grid"
+            class="leads-grid"
+          ></div>
+
+        </section>
+        <section class="team-tier">
+
+          <div class="team-tier-heading">
+
+            <div>
+              <p class="team-tier-label">03 / DEVELOPMENT</p>
+
+              <h3>Our Team</h3>
+
+              <p>
+                The artists, programmers, designers,
+                storytellers, and creators behind the game.
+              </p>
+            </div>
+
+          </div>
+
+          <div
+            id="members-grid"
+            class="members-grid"
+          ></div>
+
+        </section>
+      </div>
+
+    </section>
+
+    <section class="about-vision">
+
+      <div class="container">
+
+        <p class="about-eyebrow">
+          WHAT DRIVES US
+        </p>
+
+        <h2>Our Vision</h2>
+
+        <p class="about-description">
+          We aim to create memorable game experiences
+          through creativity, collaboration,
+          exploration, and storytelling.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/underwater.js"></script>
+  <script type="module" src="./js/team.js"></script>
+</body>
+</html>
