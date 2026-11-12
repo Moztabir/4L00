@@ -355,7 +355,7 @@ details p {
   }
 }
 
-/* SOUND */
+/* SOUND AND POP COUNTER */
 
 .bottom-controls {
   position: fixed;
@@ -367,7 +367,8 @@ details p {
   gap: 10px;
 }
 
-.sound-button {
+.sound-button,
+.pop-counter {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -385,6 +386,19 @@ details p {
 
 .sound-button:hover {
   background: var(--orange);
+}
+
+/* Without this the counter shows up before the first pop */
+.pop-counter[hidden] {
+  display: none;
+}
+
+.pop-counter {
+  cursor: default;
+}
+
+.pop-counter_number {
+  color: var(--yellow);
 }
 
 /* Only show the icon that matches the sound button */
