@@ -92,6 +92,18 @@ function moveBubbles(seconds, time) {
 }
 
 
+// Mouse
+
+const mouse = { x: 0, y: 0, lastMoved: -10000 }
+
+window.addEventListener('mousemove', (event) => {
+  // Change the page position into a scene position, where 0, 0 is the middle
+  mouse.x = event.clientX - window.innerWidth / 2
+  mouse.y = window.innerHeight / 2 - event.clientY
+  mouse.lastMoved = performance.now()
+})
+
+
 // Fish
 
 const fishShape = new THREE.PlaneGeometry(60, 26)
@@ -111,6 +123,10 @@ const redFish = fishMaterial('fish-red')
 const allFish = []
 const fishCount = isPhone ? 7 : 13
 
+// Used to place the fish in a triangle: 1 fish in the first row, 2 in the next, and so on
+let row = 0
+let column = 0
+
 for (let i = 0; i < fishCount; i++) {
   const material = i % 2 === 0 ? orangeFish : redFish
   const picture = new THREE.Mesh(fishShape, material)
@@ -125,26 +141,45 @@ for (let i = 0; i < fishCount; i++) {
     size,
     speedX: random(-60, 60),
     speedY: random(-40, 40),
-    spotX: random(-110, 110), // each fish has its own spot in the group
-    spotY: random(-70, 70)
+    // Its spot in the triangle, nudged a little so it doesn't look too perfect
+    spotX: (column - row / 2) * 45 + random(-12, 12),
+    spotY: 60 - row * 32 + random(-10, 10),
+    wave: random(0, 6), // so each fish bobs at a different time
+    flip: 1
   })
+
+  // Move to the next spot, and start a new row once this one is full
+  column += 1
+  if (column > row) {
+    row += 1
+    column = 0
+  }
 }
 
 function moveFish(seconds, time) {
   // The whole group follows this slow looping path
-  const groupX = Math.sin(time * 0.17) * window.innerWidth * 0.38
-  const groupY = Math.sin(time * 0.29 + 1) * window.innerHeight * 0.32
+  let groupX = Math.sin(time * 0.17) * window.innerWidth * 0.38
+  let groupY = Math.sin(time * 0.29 + 1) * window.innerHeight * 0.32
+
+  // Follow the mouse instead if it moved in the last 4 seconds
+  if (performance.now() - mouse.lastMoved < 4000) {
+    groupX = mouse.x
+    groupY = mouse.y
+  }
 
   for (const fish of allFish) {
     const position = fish.picture.position
 
+    // Bob gently up and down while swimming
+    const bob = Math.sin(time * 1.5 + fish.wave) * 8
+
     // Speed up toward its spot in the group
     fish.speedX += (groupX + fish.spotX - position.x) * 1.5 * seconds
-    fish.speedY += (groupY + fish.spotY - position.y) * 1.5 * seconds
+    fish.speedY += (groupY + fish.spotY + bob - position.y) * 1.5 * seconds
 
     // The water slows it down a little
-    fish.speedX *= 1 - 0.9 * seconds
-    fish.speedY *= 1 - 0.9 * seconds
+    fish.speedX *= 1 - 2 * seconds
+    fish.speedY *= 1 - 2 * seconds
 
     position.x += fish.speedX * seconds
     position.y += fish.speedY * seconds
@@ -152,8 +187,10 @@ function moveFish(seconds, time) {
     // Point the fish the way it's swimming
     fish.picture.rotation.z = Math.atan2(fish.speedY, fish.speedX)
 
-    // Flip it when swimming left so the belly stays down
-    fish.picture.scale.y = fish.speedX < 0 ? -fish.size : fish.size
+    // Turn around slowly when swimming left so the belly stays down
+    const facing = fish.speedX < 0 ? -1 : 1
+    fish.flip += (facing - fish.flip) * 0.1
+    fish.picture.scale.y = fish.size * fish.flip
   }
 }
 
