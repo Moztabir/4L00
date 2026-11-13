@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Explore artwork created by the Noise Level team for Fish n' Guppies."
+  >
+
+  <title>Art Gallery | Noise Level</title>
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="./assets/logo/Noise level.png"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Peralta&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/components/navbar.css">
+  <link rel="stylesheet" href="./css/components/footer.css">
+  <link rel="stylesheet" href="./css/pages/gallery.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js"
+    }
+  }
+  </script>
+</head>
+
+<body class="gallery-page">
+
+  <a class="skip-link" href="#gallery-content">
+    Skip to content
+  </a>
+
+  <div id="site-header"></div>
+
+  <div id="underwater-bg" aria-hidden="true"></div>
+
+  <main id="gallery-content">
+
+    <section
+      class="gallery-hero"
+      aria-labelledby="gallery-title"
+    >
+
+      <img
+        class="gallery-sunrays"
+        src="./assets/svg/sunrays.svg"
+        alt=""
+        aria-hidden="true"
+      >
+
+      <div class="container gallery-hero-content">
+
+        <p class="gallery-eyebrow">
+          NOISE LEVEL STUDIOS
+        </p>
+
+        <h1 id="gallery-title">Art Gallery</h1>
+
+        <p>
+          A look at the artwork and creative work
+          behind Fish n' Guppies.
+        </p>
+
+      </div>
+
+    </section>
+
+    <section
+      class="gallery-section"
+      aria-labelledby="collection-title"
+    >
+
+      <div class="container">
+
+        <div class="gallery-heading">
+
+          <p class="gallery-eyebrow">
+            BEHIND THE GAME
+          </p>
+
+          <h2 id="collection-title">Our Artwork</h2>
+
+          <p>
+            Concepts, characters, environments,
+            and creations from our team.
+          </p>
+
+        </div>
+        <div
+          id="gallery-grid"
+          class="gallery-grid"
+        ></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/underwater.js"></script>
+  <script type="module" src="./js/gallery.js"></script>
+
+</body>
+
+</html>

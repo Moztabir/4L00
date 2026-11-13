@@ -152,10 +152,14 @@ const popNumber = document.querySelector('.pop-counter_number')
 
 let points = 0
 
+
 function showPoints() {
+  if (!popCounter || !popNumber) return
+
   popNumber.textContent = points
   popCounter.hidden = points === 0
 }
+
 
 // Refreshing the page starts the count again from 0
 if (performance.getEntriesByType('navigation')[0].type === 'reload') {
