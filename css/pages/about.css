@@ -469,6 +469,22 @@
   margin: 0 0 22px;
 }
 
+/* Team member email link */
+.member-email {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #d1f3ff;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.member-email:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 @media (max-width: 900px) {
 
   .leadership-grid > .member-card,
