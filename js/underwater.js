@@ -146,6 +146,14 @@ function moveBubbles(seconds, time) {
 
 
 // Popping bubbles
+const bubblePopSound = new Audio('./assets/sound/bubble-pop.wav')
+bubblePopSound.volume = 0.3
+
+function playPopSound() {
+  const sound = bubblePopSound.cloneNode()
+  sound.volume = 0.3
+  sound.play()
+}
 
 const popCounter = document.querySelector('.pop-counter')
 const popNumber = document.querySelector('.pop-counter_number')
@@ -187,6 +195,7 @@ window.addEventListener('pointerdown', (event) => {
 
     if (distance < bubble.size / 2 && !bubble.popping) {
       bubble.popping = true
+      playPopSound()
       points += 1
       sessionStorage.setItem('bubblesPopped', points)
       showPoints()

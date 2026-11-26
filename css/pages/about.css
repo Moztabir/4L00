@@ -1,9 +1,11 @@
+/* 1. ABOUT PAGE BACKGROUND*/
+
+/* Blue gradient used across the About page */
 .about-page {
   min-height: 100vh;
-  color: #ffffff;
-
+  color: white;
   background: linear-gradient(
-    180deg,
+    to bottom,
     var(--water-1) 0%,
     var(--water-2) 24%,
     var(--water-3) 55%,
@@ -12,6 +14,7 @@
   );
 }
 
+/* Keeps animated fish and bubbles behind the content */
 .about-page #underwater-bg {
   position: fixed;
   inset: 0;
@@ -19,11 +22,13 @@
   pointer-events: none;
 }
 
+/* Makes sure text and cards appear above the animation */
 .about-page main {
   position: relative;
   z-index: 1;
 }
 
+/* Shared heading font */
 .about-page h1,
 .about-page h2,
 .about-page h3,
@@ -33,123 +38,122 @@
   line-height: 1.25;
 }
 
+/* Small uppercase labels */
 .about-eyebrow {
+  margin: 0 0 14px;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin: 0 0 14px;
 }
 
+/* General descriptions */
 .about-description {
   max-width: 720px;
   margin: 0 auto;
-
   font-size: clamp(16px, 1.8vw, 19px);
   line-height: 1.7;
 }
 
+/*2. ABOUT INTRODUCTION*/
+
+/* First section containing About Noise Level */
 .about-page .about-intro.hero {
   position: relative;
   isolation: isolate;
-  min-height: auto;
   display: grid;
   place-items: center;
+  min-height: auto;
   padding: 130px 20px 70px;
-  text-align: center;
-  color: #063650;
   overflow: hidden;
+  color: #063650;
+  text-align: center;
 }
 
+/* Removes the homepage hero background */
 .about-page .about-intro.hero::before {
   content: none;
 }
 
+/* Decorative sunlight behind the introduction */
 .about-page .about-intro .hero_sunrays {
   position: absolute;
   inset: 0;
-
-  display: block;
+  z-index: 0;
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center top;
-
-  z-index: 0;
   pointer-events: none;
 }
 
+/* Keeps introduction text above the sunlight */
 .about-intro-content {
   position: relative;
   z-index: 1;
-
   width: min(760px, 90%);
 }
 
+/* Main introduction title */
 .about-intro h1 {
-  font-size: clamp(36px, 5vw, 60px);
   margin: 0 0 18px;
+  font-size: clamp(36px, 5vw, 60px);
 }
 
+/* Limits the width of the introduction paragraph */
 .about-intro .about-description {
   max-width: 680px;
 }
 
+/* Meet the Crew button */
 .about-explore-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-
   margin-top: 25px;
   padding: 12px 26px;
 
   color: #063650;
-  text-decoration: none;
   font-weight: 700;
+  text-decoration: none;
 
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.65);
-
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 
-  box-shadow: 0 10px 25px rgba(0, 50, 85, 0.12);
-
-  transition:
-    transform 0.25s,
-    background-color 0.25s;
+  transition: transform 0.25s, background 0.25s;
 }
 
+/* Button hover effect */
 .about-explore-link:hover {
   transform: translateY(-3px);
   background: rgba(255, 255, 255, 0.55);
 }
 
+/*3. MEET THE CREW SECTION*/
+
+/* Section containing all team profiles */
 .about-team {
   position: relative;
-
   padding: 65px 0 75px;
-
   text-align: center;
-  color: white;
-
   background: transparent;
 }
 
+/* Meet the Crew introduction */
 .about-section-heading {
   max-width: 760px;
   margin: 0 auto 65px;
 }
 
 .about-section-heading h2 {
-  font-size: clamp(34px, 5vw, 56px);
   margin: 0 0 16px;
+  font-size: clamp(34px, 5vw, 56px);
 }
 
+/* Space between Leadership, Leads, and Members */
 .team-tier {
   width: 100%;
   margin-bottom: 70px;
@@ -159,244 +163,250 @@
   margin-bottom: 0;
 }
 
-/* Section Heading */
-
+/* Department section headings */
 .team-tier-heading {
-  display: flex;
-  align-items: center;
-
   margin-bottom: 28px;
   text-align: left;
 }
 
+/* Small numbered labels: 01, 02, 03 */
 .team-tier-label {
-  font-size: 11px;
-  letter-spacing: 2px;
-  font-weight: 700;
-
-  color: #c8f2ff;
-
   margin: 0 0 10px;
+  color: #c8f2ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
+/* Studio Leadership / Department Leads / Our Team */
 .team-tier-heading h3 {
-  font-size: clamp(26px, 3vw, 36px);
   margin: 0 0 8px;
+  font-size: clamp(26px, 3vw, 36px);
 }
 
+/* Short descriptions under each department heading */
 .team-tier-heading p:not(.team-tier-label) {
+  margin: 0;
   font-size: 14px;
   line-height: 1.6;
   opacity: 0.9;
-  margin: 0;
 }
 
+/*4. TEAM CARD LAYOUT */
+
+/* Keeps all cards centred and equally spaced */
 .leadership-grid,
 .leads-grid,
 .members-grid {
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
   align-items: stretch;
-
   gap: 22px;
 }
 
-.leadership-grid > .member-card {
-  flex: 0 1 calc((100% - 44px) / 3);
-}
-
-
+/* Three cards per row for leadership and leads */
+.leadership-grid > .member-card,
 .leads-grid > .member-card {
   flex: 0 1 calc((100% - 44px) / 3);
 }
 
+/* Four cards per row for regular team members */
 .members-grid > .member-card {
   flex: 0 1 calc((100% - 66px) / 4);
 }
 
+/*5. TEAM CARD DESIGN*/
+
+/* Dark ocean-blue cards - Option 2 */
 .member-card {
   --glow-x: 50%;
   --glow-y: 0%;
 
   position: relative;
   isolation: isolate;
-  overflow: hidden;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 
   min-width: 0;
-
   padding: 28px 22px;
+  overflow: hidden;
 
   text-align: center;
-
   border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 
-  background: rgba(210, 242, 255, 0.16);
+  background: linear-gradient(
+    145deg,
+    rgba(21, 94, 140, 0.96),
+    rgba(7, 55, 87, 0.98)
+  );
 
-  border: 1px solid rgba(255, 255, 255, 0.52);
-
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.45),
-    0 14px 32px rgba(0, 32, 65, 0.16);
-
-  backdrop-filter: blur(16px) saturate(145%);
-  -webkit-backdrop-filter: blur(16px) saturate(145%);
+  box-shadow: 0 14px 32px rgba(0, 32, 65, 0.2);
 
   transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 
+/* Soft white reflection that follows the mouse */
 .member-card::before {
   content: '';
-
   position: absolute;
   inset: 0;
   z-index: 0;
-
   pointer-events: none;
 
   background: radial-gradient(
     320px circle at var(--glow-x) var(--glow-y),
-    rgba(255, 255, 255, 0.28),
+    rgba(255, 255, 255, 0.18),
     transparent 70%
   );
 }
 
+/* Keeps profile content above the reflection */
 .member-card > * {
   position: relative;
   z-index: 1;
 }
 
+/* Card moves slightly upward when hovered */
 .member-card:hover {
   transform: translateY(-5px);
-
   border-color: rgba(255, 255, 255, 0.85);
-
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.65),
-    0 22px 42px rgba(0, 32, 65, 0.22);
+  box-shadow: 0 22px 42px rgba(0, 32, 65, 0.3);
 }
 
+/*6. PROFILE PICTURES*/
+
+/* Circular frame for every team member */
 .member-avatar {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
-  flex: none;
-
   display: grid;
   place-items: center;
 
   width: 108px;
   height: 108px;
-
-  margin: 0 0 18px;
+  margin: 0 auto 18px;
+  flex-shrink: 0;
+  overflow: hidden;
 
   border-radius: 50%;
-
-  background: linear-gradient(
-    135deg,
-    #96e5fc,
-    #277ba7
-  );
-
   border: 4px solid rgba(222, 250, 255, 0.9);
+  background: linear-gradient(135deg, #96e5fc, #277ba7);
 
   box-shadow:
     0 0 0 6px rgba(255, 255, 255, 0.12),
-    0 12px 25px rgba(3, 47, 78, 0.24),
-    inset -8px -8px 18px rgba(0, 45, 80, 0.2);
+    0 12px 25px rgba(3, 47, 78, 0.24);
 }
 
+/* Fills the circle without stretching the picture */
 .member-avatar img {
   position: absolute;
   inset: 0;
-
   display: block;
 
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center;
 
   opacity: 0;
-
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s;
 }
 
+/* Shows the image after loading */
 .member-avatar.has-photo img {
   opacity: 1;
 }
 
+/* Initials shown while the image is loading */
 .avatar-initials {
+  color: white;
   font-size: 31px;
   font-weight: 700;
-  color: white;
 }
 
+/* Hides initials when the image is ready */
 .member-avatar.has-photo .avatar-initials {
   opacity: 0;
 }
 
+/* Small shine on top of the circular portrait */
 .member-avatar::after {
   content: '';
-
   position: absolute;
-  z-index: 2;
-
   top: 9px;
   left: 13px;
+  z-index: 2;
 
   width: 35%;
   height: 15%;
-
-  transform: rotate(-35deg);
   border-radius: 50%;
 
   background: rgba(255, 255, 255, 0.55);
-
   filter: blur(4px);
+  transform: rotate(-35deg);
   pointer-events: none;
 }
 
+/*7. PROFILE TEXT AND EMAILS*/
+
+/* Holds the name, role, biography, and email */
 .member-content {
   width: 100%;
   min-width: 0;
+  text-align: center;
 }
 
+/* Member names */
 .member-card .member-name {
-  font-size: clamp(18px, 2vw, 23px);
-
   margin: 0 0 8px;
-
+  color: white;
+  font-size: clamp(18px, 2vw, 23px);
   overflow-wrap: anywhere;
 }
 
-.member-role {
+/* Job titles */
+.member-card .member-role {
+  margin: 0 0 14px;
+  color: #b7e9ff;
   font-size: 13px;
   font-weight: 700;
-
-  color: #d1f3ff;
-
-  margin: 0 0 14px;
 }
 
-.member-bio {
-  font-size: 13px;
-  line-height: 1.65;
-
-  color: rgba(255, 255, 255, 0.96);
-
+/* Member biographies */
+.member-card .member-bio {
   margin: 0;
+  color: white;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
+/* Clickable email addresses */
+.member-card .member-email {
+  display: inline-block;
+  margin-top: 16px;
+
+  color: #b7e9ff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+/* Email hover colour */
+.member-card .member-email:hover {
+  color: white;
+}
+
+/*8. DIFFERENT TEAM CARD SIZES*/
+
+/* Studio leadership cards are slightly larger */
 .member-card--executive {
   padding: 34px 28px;
 }
@@ -410,34 +420,23 @@
   font-size: clamp(21px, 2.1vw, 26px);
 }
 
+/* Department lead card sizes */
 .leads-grid .member-card--lead {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   padding: 30px 24px;
-  margin: 0;
-
-  text-align: center;
 }
 
 .leads-grid .member-card--lead .member-avatar {
   width: 112px;
   height: 112px;
-  margin: 0 0 18px;
 }
 
 .leads-grid .member-card--lead .member-name {
   font-size: 22px;
 }
 
-.leads-grid .member-card--lead .member-role {
-  margin-bottom: 14px;
-}
-
+/* Regular member cards are more compact */
 .members-grid .member-card--member {
   padding: 25px 18px;
-  margin: 0;
 }
 
 .members-grid .member-card--member .member-avatar {
@@ -449,59 +448,46 @@
   font-size: 19px;
 }
 
-.members-grid .member-card--member .member-bio {
-  font-size: 12.5px;
-}
+/*9. OUR VISION SECTION*/
 
+/* Bottom section describing the studio's goals */
 .about-vision {
   position: relative;
-
   padding: 40px 20px 110px;
-
   text-align: center;
-  color: #ffffff;
-
+  color: white;
   background: transparent;
 }
 
+/* Our Vision heading */
 .about-vision h2 {
-  font-size: clamp(30px, 4vw, 45px);
   margin: 0 0 22px;
+  font-size: clamp(30px, 4vw, 45px);
 }
 
-/* Team member email link */
-.member-email {
-  display: inline-block;
-  margin-top: 16px;
-  font-size: 13px;
-  font-weight: 600;
-  color: #d1f3ff;
-  text-decoration: none;
-  overflow-wrap: anywhere;
-}
-
-.member-email:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
+/*10. TABLET LAYOUT*/
 
 @media (max-width: 900px) {
 
+  /* Two cards per row on tablets */
   .leadership-grid > .member-card,
   .leads-grid > .member-card,
   .members-grid > .member-card {
     flex-basis: calc((100% - 22px) / 2);
   }
 
+  /* Slightly smaller space between departments */
   .team-tier {
     margin-bottom: 60px;
   }
 }
 
+/*11. MOBILE LAYOUT*/
+
 @media (max-width: 600px) {
 
+  /* Smaller introduction spacing */
   .about-page .about-intro.hero {
-    min-height: auto;
     padding: 115px 16px 55px;
   }
 
@@ -517,6 +503,7 @@
     font-size: 15px;
   }
 
+  /* Smaller spacing between team sections */
   .about-team {
     padding: 55px 0 65px;
   }
@@ -537,6 +524,7 @@
     font-size: 25px;
   }
 
+  /* One card per row on phones */
   .leadership-grid,
   .leads-grid,
   .members-grid {
@@ -550,27 +538,15 @@
     max-width: 480px;
   }
 
+  /* Smaller card padding */
   .member-card--executive,
   .leads-grid .member-card--lead,
   .members-grid .member-card--member {
     padding: 28px 20px;
   }
 
+  /* Bottom section spacing */
   .about-vision {
     padding: 25px 16px 85px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  .member-card,
-  .member-avatar img,
-  .about-explore-link {
-    transition: none;
-  }
-
-  .member-card:hover,
-  .about-explore-link:hover {
-    transform: none;
   }
 }

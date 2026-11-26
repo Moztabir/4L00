@@ -26,7 +26,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
-  background: var(--water-6);
+  background: var(--water-5);
 }
 
 body {
@@ -35,6 +35,7 @@ body {
   font-family: var(--body-font);
   line-height: 1.65;
   overflow-x: hidden;
+  background: transparent;
 }
 
 .container {
@@ -339,8 +340,7 @@ details p {
   padding: 0 22px 20px;
 }
 
-/* FADE IN ON SCROLL
-   --start makes the cards appear one after another */
+/* FADE IN ON SCROLL */
 
 .fade-in {
   animation: fade-up linear both;

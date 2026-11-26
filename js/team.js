@@ -126,7 +126,7 @@ const departments = [
         role: 'Marketing Team',
         bio: 'I am a marketing team member. I help with social media, promotional materials, and community engagement.',
         photo: './assets/images/team/10_29_26_Dimple_Portrait.jpg',
-        email: 'matteo.r.monteleone@gmail.com'
+        email: ' '
       },
       {
         name: 'Shayan Owji',
@@ -190,14 +190,14 @@ const departments = [
         role: 'Programming Team',
         bio: 'I am a programmer. I help implement game mechanics and features, and ensure that our game runs smoothly.',
         photo: './assets/images/team/10_29_26_Cadence_Portrait.jpg',
-        email: 'matteo.r.monteleone@gmail.com'
+        email: ' '
       },
       {
       name: 'Emily',
       role: 'Programming Lead',
       bio: 'I oversee the programming team and ensure that our game has a solid and efficient codebase.',
       photo: './assets/images/team/10_29_26_Emily_Portrait.jpg',
-      email: 'matteo.r.monteleone@gmail.com'
+      email: 'zmw0211@gmail.com'
       },
 
     ]
