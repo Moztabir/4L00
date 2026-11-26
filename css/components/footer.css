@@ -103,15 +103,23 @@
 }
 
 /* Legal button appearance */
-.legal-links button {
+.legal-links a {
   padding: 8px 14px;
 
   color: white;
   font: 500 13px var(--body-font);
+  text-decoration: none;
 
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 8px;
   background: transparent;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Highlight legal links when hovered */
+.legal-links a:hover {
+  background: var(--yellow);
+  color: var(--dark-text);
 }
 
 

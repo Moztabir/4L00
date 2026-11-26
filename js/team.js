@@ -126,7 +126,7 @@ const departments = [
         role: 'Marketing Team',
         bio: 'I am a marketing team member. I help with social media, promotional materials, and community engagement.',
         photo: './assets/images/team/10_29_26_Dimple_Portrait.jpg',
-        email: ' '
+        email: 'mistrydmpl@gmail.com'
       },
       {
         name: 'Shayan Owji',
