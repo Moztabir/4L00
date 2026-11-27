@@ -38,7 +38,7 @@ const departments = [
       {
         name: 'Will Eisner Stanlee D. Castaneda',
         role: 'Artist',
-        bio: ' I’m an upcoming 2D, 3D, concept artist. I’ve done tattoo, character, and creature designs. (i still wanna edit this)',
+        bio: ' I’m an upcoming 2D, 3D, concept artist. I’ve done tattoo, character, and creature designs.',
         photo: './assets/images/team/10_29_26_Stanlee_Portrait.jpg',
         email: ' stanleecastaneda@gmail.com'
       },
